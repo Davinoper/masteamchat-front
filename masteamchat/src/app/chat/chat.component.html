@@ -1,0 +1,32 @@
+<div>
+    <div class="container">
+        <h1>Chat {{chatID}}</h1>
+
+        <div class="card" style="width: 100%; height: 600px; overflow: auto;">
+            <div class="card-body">
+              <div class="alert" *ngFor="let message of messages">
+                <h5>{{ message.userName }}</h5>
+                
+                <div class="row">
+                  <p class="col">{{ message.message }}</p>
+
+                  <p class="col">{{ message.time }}</p>
+  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+
+          <form novalidate [formGroup]="formulario">
+            
+              <input type="text" style="width:95%;height: 40px;" class="input" formControlName="message" />
+              <button type="submit" class="btn btn btn-primary" style="position: absolute; " (click)="sendMessage()">Enviar</button>
+           
+          </form>
+          
+    </div>
+    
+    
+
+</div>

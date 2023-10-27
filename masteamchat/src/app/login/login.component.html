@@ -1,0 +1,15 @@
+<div class="container">
+    <form [formGroup]="formulario">
+        <div class="col-mb-3">
+            <label>Email</label>
+            <input class="form-control" type="text" formControlName="email">
+        </div>
+
+        <div class="col-mb-3">
+            <label>Senha</label>
+            <input class="form-control" type="password" formControlName="password">
+        </div>
+
+        <button class="btn btn-primary" (click)="logar()" type="submit">Entrar</button>
+    </form>
+</div>
